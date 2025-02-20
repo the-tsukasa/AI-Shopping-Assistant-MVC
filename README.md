@@ -4,7 +4,7 @@
 ## 🛠 開発環境  
 **開発言語**: HTML, JavaScript, CSS  
 **制作者**: HAL東京 PI11B 14 (PI021)  
-**プレビュー**: [YoBi - AIショッピングアシスタント](https://the-tsukasa.github.io/AI-Shopping-Assistant/index.html)  
+**プレビュー**: [YoBi - AIショッピングアシスタント](https://the-tsukasa.github.io/AI-Shopping-Assistant-MVC/public/)  
 
 ⚠ **注意**  
 クイックプレビューでは以下の問題が発生する可能性があります：  
