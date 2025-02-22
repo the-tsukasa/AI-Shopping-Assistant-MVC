@@ -95,4 +95,13 @@
     font-weight: bold;
     color: #007bff;
   }
-  
+  /* 📱 手机端 (两列布局) */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 强制两列 */
+  }
+
+  .product-card {
+    width: 100%; /* 让卡片适应父元素宽度 */
+  }
+}
