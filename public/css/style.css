@@ -162,19 +162,52 @@ footer {
   header {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
 
   nav {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px; /* 控制导航项之间的间距 */
+    width: 100%;
   }
 
   #search-bar {
     width: 90%;
-    margin-top: 10px;
+    margin: 10px 0; /* 减少代码冗余 */
   }
 
   main {
-    padding: 20px;
+    padding: 15px;
+  }
+}
+
+/* ==================== Extra Small Screens (480px 以下) ==================== */
+@media (max-width: 480px) {
+  header {
+    flex-direction: row; /* 横向排列 */
+    align-items: center;
+    justify-content: space-between; /* 左右对齐 */
+    padding: 10px;
+    flex-wrap: wrap; /* 允许换行 */
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap; /* 不换行 */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 占满宽度 */
+    gap: 5px;
+  }
+
+  #search-bar {
+    width: 100%; /* 保持与导航栏并列 */
+    margin: 5px;
+  }
+
+  main {
+    padding: 10px;
   }
 }
