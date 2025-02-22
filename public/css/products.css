@@ -1,4 +1,5 @@
 /* ==================== products.html 过滤器 (filters) ==================== */
+
 #filters {
     margin: 15px auto;
     padding: 10px;
@@ -44,40 +45,7 @@
     outline: none;
   }
   
-  /* 📌 平板端 */
-  @media (max-width: 768px) {
-    #filters {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .filter-group {
-      width: 48%;
-      min-width: 140px;
-    }
-  }
-  
-  /* 📌 手机端 (横向滚动) */
-  @media (max-width: 480px) {
-    #filters {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 5px 10px;
-    }
-    .filter-group {
-      flex: 0 0 auto;
-      min-width: 120px;
-      text-align: center;
-    }
-    #filters select {
-      width: auto;
-      padding: 6px;
-      font-size: 14px;
-    }
-  }
-  
+ 
   /* ============== 商品网格布局 ============== */
   .product-grid {
     display: flex;
