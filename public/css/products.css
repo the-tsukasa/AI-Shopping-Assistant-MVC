@@ -1,107 +1,112 @@
 /* ==================== products.html 过滤器 (filters) ==================== */
 
 #filters {
-    margin: 15px auto;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap; /* 允许换行 */
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    max-width: 900px; /* 限制最大宽度 */
-    width: 100%;
-  }
-  
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 120px;
-    flex-grow: 1;
-    padding: 5px;
-  }
-  
-  #filters label {
-    margin-bottom: 3px;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  
-  #filters select {
-    padding: 6px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    width: 100%;
-    font-size: 14px;
-    background-color: #fff;
-    transition: border-color 0.3s;
-  }
-  
-  #filters select:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
- 
-  /* ============== 商品网格布局 ============== */
-  .product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px;
-    justify-content: center;
-  }
-  
-  /* 商品卡片 */
+  margin: 15px auto;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: nowrap; /* 永不换行 */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px; /* 限制最大宽度 */
+  width: 100%;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  flex-grow: 1;
+  padding: 5px;
+}
+
+#filters label {
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#filters select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+#filters select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* ============== 商品网格布局 ============== */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* 商品卡片 */
+.product-card {
+  width: 18%;  /* 默认 5 列布局 */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* 价格 */
+.product-card .price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* ============== 平板和大屏手机适配（≤ 1024px） ============== */
+@media screen and (max-width: 1024px) {
   .product-card {
-    width: 220px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    text-align: center;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+    width: 30%;  /* 每行 3 列 */
   }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-  .product-card h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .product-card p {
-    margin: 5px 0;
-    color: #666;
-  }
-  
-  /* 价格 */
-  .product-card .price {
-    font-weight: bold;
-    color: #007bff;
-  }
-  /* 📱 手机端 (两列布局) */
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 强制两列 */
+}
+
+/* ============== 小屏幕适配（≤ 480px） ============== */
+@media screen and (max-width: 480px) {
+  .product-card {
+    width: 100%;  /* 每行 1 列 */
   }
 
-  .product-card {
-    width: 100%; /* 让卡片适应父元素宽度 */
-  }
+
 }
