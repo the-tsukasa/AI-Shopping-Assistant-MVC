@@ -1,0 +1,213 @@
+/* ==================== Global & Reset ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f5f7; /* 更加柔和的背景色 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; /* 主体文字颜色 */
+}
+
+/* ==================== Header & Navigation ==================== */
+header, footer {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #ffffff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 12px 12px;
+}
+
+.logo-container img {
+  height: 45px;
+  transition: transform 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a.active, nav a:hover {
+  background-color: #e6e9f0;
+  color: #6a5acd;
+}
+
+/* ==================== Search Bar ==================== */
+#search-bar {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#search-bar:focus {
+  border-color: #6a5acd;
+  box-shadow: 0 0 5px rgba(106, 90, 205, 0.2);
+}
+
+/* ==================== Main & Footer ==================== */
+main {
+  flex: 1;
+  padding: 30px;
+  background-color: inherit;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ==================== Buttons ==================== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  background: linear-gradient(135deg, #8a7de0, #6a5acd);
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(106, 90, 205, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #6a5acd, #5548b5);
+  transform: translateY(-4px);
+}
+
+.btn-logout {
+  background: linear-gradient(135deg, #ff7676, #e74c3c);
+}
+
+.btn-logout:hover {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* ==================== Breadcrumb Navigation ==================== */
+.breadcrumb {
+  font-size: 14px;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #6a5acd;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.breadcrumb a:hover {
+  background-color: #edeaff;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* 控制导航项之间的间距 */
+    width: 100%;
+  }
+
+  #search-bar {
+    width: 90%;
+    margin: 10px 0; /* 减少代码冗余 */
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+/* ==================== Extra Small Screens (480px 以下) ==================== */
+@media (max-width: 480px) {
+  header {
+    flex-direction: row; /* 横向排列 */
+    align-items: center;
+    justify-content: space-between; /* 左右对齐 */
+    padding: 10px;
+    flex-wrap: wrap; /* 允许换行 */
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: nowrap; /* 不换行 */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 占满宽度 */
+    gap: 5px;
+  }
+
+  #search-bar {
+    width: 100%; /* 保持与导航栏并列 */
+    margin: 5px;
+  }
+
+  main {
+    padding: 10px;
+  }
+}
