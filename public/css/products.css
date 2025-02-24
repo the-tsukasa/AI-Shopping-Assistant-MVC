@@ -98,11 +98,22 @@
 /* ============== 平板和大屏手机适配（≤ 1024px） ============== */
 @media screen and (max-width: 1024px) {
   .product-card {
-    width: 100%;  /* 每行 1 列 */
+    width: 23%;  /* 每行 4 列 */
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: 45%;
+    margin-bottom: 20px;  /* 增加底部间距 */
   }
 }
 
 @media screen and (max-width: 480px) {
+  .product-card {
+    width: 80%;  /* 每行放一个更合适 */
+    margin-bottom: 15px;  /* 增加底部间距 */
+  }
+
   #filters {
     gap: 4px;  /* 减少间距 */
     padding: 5px;  /* 缩小内边距 */
@@ -122,4 +133,5 @@
     padding: 4px;  /* 缩小内边距 */
   }
 }
+
 
